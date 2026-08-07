@@ -47,6 +47,12 @@
       "database_name": "sink", // Override with DEPLOY_D1_DATABASE_NAME (default: sink)
       "database_id": "ef964055-65bf-4b78-b109-ac9c9290ae62", // Override with DEPLOY_D1_DATABASE_ID (required for CLI deploy)
       "migrations_dir": "drizzle"
+    },
+    {
+      "binding": "sink",
+      "database_name": "sink",
+      "database_id": "e92d1f40-50ca-4a8e-bb60-9e0797dd0a18",
+      "remote": true
     }
   ],
   "r2_buckets": [
@@ -59,6 +65,8 @@
     }
   ],
   "triggers": {
-    "crons": ["0 0 * * *"] // Run backup task daily at 00:00 UTC
+    "crons": [
+      "0 0 * * *"
+    ] // Run backup task daily at 00:00 UTC
   }
 }
